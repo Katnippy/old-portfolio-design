@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Fira+Mono";
 
 $banner-font: Fira Mono, Monaco, Lucida Console, Courier New, monospace;
-$content-font: Arial;
+$content-font: Arial, Helvetica, sans-serif;
 
 @mixin flex-banner-items {
   display: flex;
@@ -52,4 +52,48 @@ body {
 #content {
   grid-area: "content";
   background-color: white;
+}
+
+.card-body {
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .github-logo {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  .tag {
+    margin: 4px;
+    padding: 4px 10px;
+    font-size: 80%;
+    text-decoration: none;
+    border-radius: 5px
+  }
+}
+
+.python {
+  background-color: #3776ab;
+  color: #ffd343;
+}
+.sqlite {
+  background-color: #003856;
+  color: white;
+}
+.flask{
+  background-color: black;
+  color: white;
+}
+.js {
+  background-color: #f7df1e;
+  color: black;
+}
+.stats {
+  background-color: #E52B50;
+  color: white;
 }
