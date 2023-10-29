@@ -37,15 +37,15 @@ body {
   font-family: $banner-font;
   display: flex;
   flex-direction: column;
-  .header-text {
-    @include flex-banner-items;
-  }
-  .logos {
-    @include flex-banner-items;
-    i {
-      color: white;
-      margin-right: 16px;
+    .header-text {
+      @include flex-banner-items;
     }
+    .logos {
+      @include flex-banner-items;
+      i {
+        color: white;
+        margin-right: 16px;
+      }
   }
 }
 
@@ -65,7 +65,7 @@ body {
   }
 }
 
-.tags {
+.tags { // TODO: Give credit - https://codepen.io/ltc/pen/DOoOBE
   display: flex;
   flex-wrap: wrap;
   .tag {
@@ -74,6 +74,14 @@ body {
     font-size: 80%;
     text-decoration: none;
     border-radius: 5px
+  }
+}
+
+.other {
+  .tags {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 16px;
   }
 }
 
