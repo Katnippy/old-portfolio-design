@@ -30,13 +30,17 @@ body {
   text-decoration: none;
 }
 
-#banner {
+#banner { // TODO: Centre banner stuff, make banner responsive
   grid-area: "banner";
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   color: white;
   font-family: $banner-font;
-  display: flex;
-  flex-direction: column;
+  #header {
+    display: flex;
+    flex-direction: column;
     .header-text {
       @include flex-banner-items;
     }
@@ -46,10 +50,12 @@ body {
         color: white;
         margin-right: 16px;
       }
+    }
   }
 }
 
-#content {
+#content { // TODO: Move cards slightly upwards, make attribution text at the 
+           // TODO: bottom not go past website
   grid-area: "content";
   background-color: white;
 }
