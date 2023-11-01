@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Fira+Mono";
 
 $banner-font: Fira Mono, Monaco, Lucida Console, Courier New, monospace;
-$content-font: Arial, Helvetica, sans-serif;
+$content-font: Arial, Helvetica, sans-serif; // ? Better font?
 
 @mixin flex-banner-items {
   display: flex;
@@ -16,7 +16,10 @@ body {
   font-family: $content-font;
 }
 
-#container {
+#container { // TODO: Make everything responsive! 3 situations: desktop (4
+             // TODO: cards all on 1 page), smaller desktop or tablet (2 cards 
+             // TODO: - never 3 - all on 1 page), and mobile (1 card on a 
+             // TODO: scrollable page)
   width: 100%;
   height: 100%;
   display: grid;
@@ -31,7 +34,7 @@ body {
   text-decoration: none;
 }
 
-#banner { // TODO: Centre banner stuff, make banner responsive
+#banner {
   grid-area: "banner";
   display: flex;
   justify-content: center;
@@ -39,7 +42,7 @@ body {
   background-color: black;
   color: white;
   font-family: $banner-font;
-  #header {
+  #header { // TODO: Contents must shrink as the window does.
     display: flex;
     flex-direction: column;
     .header-text {
@@ -55,8 +58,7 @@ body {
   }
 }
 
-#content { // TODO: Move cards slightly upwards, make attribution text at the 
-           // TODO: bottom not go past website
+#content { // TODO: Move cards slightly upwards, split them out more too.
   grid-area: "content";
   background-color: white;
 }
@@ -137,7 +139,7 @@ body {
   color: white;
 }
 
-#footer {
+#footer { // ? Go more towards bottom?
   grid-area: "footer";
   display: flex;
   justify-content: center;
